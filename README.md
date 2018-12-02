@@ -14,3 +14,11 @@ That's all it will take to convert your project. Enjoy!
 
 
 Don't hesitate to contact me at devansh@dksources.com if you have and questions or problems. 
+
+
+## Explanation
+The ```nbproject``` is a required folder by NetBeans, where it keeps its project settings. 
+The only neccessary files needed are the ```project.xml``` and ```project.properties```. 
+
+
+In ```project.xml```, the line 5 is changed to reflect the accurate name of the user's project. A hard unmodified copy is kept in the ```template``` folder, and the working copy are duplicated in the internal ```nbproject``` folder
