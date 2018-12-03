@@ -4,6 +4,8 @@ Make your Java applications created in IntelliJ easily compatible with NetBeans!
 
 Coded by Devansh Kaloti, Edited by Will Assad
 
+# Getting Started
+
 Download this repository.
 
 ```
