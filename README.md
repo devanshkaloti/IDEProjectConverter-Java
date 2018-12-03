@@ -1,7 +1,7 @@
 # IntelliJ to NetBeans Project Converter
 
 Make your Java applications created in IntelliJ easily compatible with NetBeans!
---> Coded by Devansh Kaloti, Edited by Will Assad
+Coded by Devansh Kaloti, Edited by Will Assad
 
 Download this repository.
 
