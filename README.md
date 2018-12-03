@@ -12,13 +12,13 @@ Download this repository.
 $ git clone https://github.com/willassad/IntelliJtoNetBeans-Converter
 ```
 
-Install the software.
+Switch into the project folder and install the software.
 
 ```
 $ python install.py
 ```
 
-Convert a project to NetBeans!
+Convert a project to NetBeans from terminal!
 
 ```
 $ convert /Users/johnexample/Desktop/myproject
