@@ -20,6 +20,7 @@ class InstallConvert():
         print('|                 Developed By DkSources               |')
         print('|                  Edited by Will Assad                |')
         print('+------------------------------------------------------+')
+        self.homedir = os.path.expanduser('~')
 
 
     def setup(self):
@@ -34,16 +35,20 @@ class InstallConvert():
 
 
     def mac_osx_install_route(self):
+        # spdir = os.path.join(self.homedir, "DKsources", "convert")
+        # os.system("chmod +x ./main.py")
+        # os.system("mkdir " + spdir)
+        # os.system('export PATH="$PATH:$HOME/bin"')
+        # os.system("cp -r "+ self.homedir + spdir)
+
         os.system("chmod +x ./main.py")
         os.system('export PATH="$PATH:$HOME/bin"')
         os.system("ln -s " + os.getcwd() + "/main.py /usr/local/bin/convert")
 
     def windows_install_route(self):
-        homedir = os.path.expanduser('~')
-
-        os.system("mkdir " + os.path.join(homedir, "DKsources", "convert"))
-        os.system("xcopy \"" + os.getcwd() + "\" \"" + os.path.join(homedir, "DKsources", "convert") + "\" /s /y")
-        os.system("SETX PATH \"%PATH%;" + os.path.join(homedir, "DKsources") + "\"")
+        os.system("mkdir " + os.path.join(self.homedir, "DKsources", "convert"))
+        os.system("xcopy \"" + os.getcwd() + "\" \"" + os.path.join(self.homedir, "DKsources", "convert") + "\" /s /y")
+        os.system("SETX PATH \"%PATH%;" + os.path.join(self.homedir, "DKsources") + "\"")
 
 if __name__ == "__main__":
     installer = InstallConvert()

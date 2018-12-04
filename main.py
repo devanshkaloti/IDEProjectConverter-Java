@@ -58,6 +58,17 @@ def copyFolder(src, dist):
     print(src, dist)
     try:
         shutil.copytree(src, dist)  # Copy files
+    except FileExistsError:
+        print("File Existed")
+    except Exception as e:
+        print(e)
+
+def copyFile(src, dist):
+    print(src, dist)
+    try:
+        shutil.copyfile(src, dist)
+    except FileExistsError:
+        print("File Existed")
     except Exception as e:
         print(e)
 
@@ -90,11 +101,10 @@ def main():
         return
 
     srcPath = file_name.strip(" ")
-    dstPath = srcPath + "NB"
 
     replaceProjectName(srcPath)
-    copyFolder(srcPath + "/src", dstPath + "/src")  # Copy coding
-    copyFolder(filepath("nbproject",""), dstPath + "/nbproject")  # Copy settings
+    copyFolder(filepath("nbproject",""), srcPath + "/nbproject")  # Copy settings
+    copyFile(filepath("template", "nbtointellij.iml"), srcPath + "/" + getProjectName(srcPath) + ".iml")
 
     resetFolder()
     print("\n\nYour project has been converted!\nPlease look in your source directory.")
