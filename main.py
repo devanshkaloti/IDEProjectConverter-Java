@@ -13,10 +13,7 @@ __status__ = "Production"
 """main.py will convert Intellij Projects
    to be Netbeans compatible.
 """
-
-import shutil
-import sys
-import os
+import shutil, sys, os
 
 homedir = os.path.expanduser('~')
 pathToPath = os.path.join(homedir, "path.txt")

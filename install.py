@@ -10,8 +10,7 @@ __maintainer__ = "DKSources"
 __email__ = "willassadcode@gmail.com"
 __status__ = "Production"
 
-import os
-import platform
+import os, platform, sys
 
 class InstallConvert():
 
@@ -24,18 +23,27 @@ class InstallConvert():
 
 
     def setup(self):
-        homedir = os.path.expanduser('~')
 
         if platform.system() == "Darwin":
             self.mac_osx_install_route()
-        with open(os.path.join(homedir, "path.txt"),"w") as f:
+        if platform.system() == "Windows":
+            self.windows_install_route()
+
+        with open(os.path.join(os.path.expanduser('~'), "path.txt"),"w") as f:
             f.write(os.getcwd())
+
 
     def mac_osx_install_route(self):
         os.system("chmod +x ./main.py")
         os.system('export PATH="$PATH:$HOME/bin"')
         os.system("ln -s " + os.getcwd() + "/main.py /usr/local/bin/convert")
 
+    def windows_install_route(self):
+        homedir = os.path.expanduser('~')
+
+        os.system("mkdir " + os.path.join(homedir, "DKsources", "convert"))
+        os.system("xcopy \"" + os.getcwd() + "\" \"" + os.path.join(homedir, "DKsources", "convert") + "\" /s /y")
+        os.system("SETX PATH \"%PATH%;" + os.path.join(homedir, "DKsources") + "\"")
 
 if __name__ == "__main__":
     installer = InstallConvert()
