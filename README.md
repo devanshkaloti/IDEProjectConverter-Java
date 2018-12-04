@@ -18,7 +18,7 @@ Switch into the project folder and install the software.
 $ python install.py
 ```
 
-Convert a project to NetBeans from terminal!
+Convert a project to NetBeans from terminal or CMD!
 
 ```
 $ convert /Users/johnexample/Desktop/myproject
