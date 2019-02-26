@@ -10,7 +10,7 @@ Coded by Devansh Kaloti, Edited by Will Assad
 Download this repository.
 
 ```
-$ git clone https://github.com/willassad/IntelliJtoNetBeans-Converter
+$ git clone https://github.com/devanshkaloti/IntelliJtoNetBeans-Converter
 ```
 
 Switch into the project folder and install the software.
