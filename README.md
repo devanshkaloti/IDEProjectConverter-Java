@@ -16,7 +16,7 @@ $ git clone https://github.com/devanshkaloti/IntelliJtoNetBeans-Converter
 Switch into the project folder and install the software.
 
 ```
-$ python install.py
+$ sudo python install.py
 ```
 
 Make the project IntelliJ and NetBeans compatible from terminal or CMD!
