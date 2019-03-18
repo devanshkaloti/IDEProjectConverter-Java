@@ -61,8 +61,8 @@ class InstallConvert():
     def windows_install_route(self):
         os.system("mkdir " + os.path.join(self.homedir, "DKsources", "convert"))
         os.system("xcopy \"" + os.getcwd() + "\" \"" + os.path.join(self.homedir, "DKsources", "convert") + "\" /s /y")
-        os.system("SET PATH \"%PATH%;" + os.path.join(self.homedir, "DKsources") + "\\")
-        os.system("SETX PATH \"%PATH%;" + os.path.join(self.homedir, "DKsources") + "\\")
+        os.system("SET PATH \"%PATH%;" + os.path.join(self.homedir, "DKsources", "convert") + "\\")
+        os.system("SETX PATH \"%PATH%;" + os.path.join(self.homedir, "DKsources", "convert") + "\\")
 
 
 if __name__ == "__main__":
