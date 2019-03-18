@@ -7,22 +7,34 @@ Coded by Devansh Kaloti, Edited by Will Assad
 
 ## Getting Started
 
-Download this repository.
+### Mac Users
 
 ```
+// Download this respository
 $ git clone https://github.com/devanshkaloti/IntelliJtoNetBeans-Converter
-```
 
-Switch into the project folder and install the software.
-
-```
+// Switch into the project folder and install the software.
 $ sudo python install.py
-```
 
-Make the project IntelliJ and NetBeans compatible from terminal or CMD!
-
-```
+// Make the project IntelliJ and NetBeans compatible from terminal!
 $ convert /Users/johnexample/Desktop/myproject
+
+```
+
+### Windows Users
+
+```
+// Download this respository
+$ git clone https://github.com/devanshkaloti/IntelliJtoNetBeans-Converter
+
+// Switch into the project folder and install the software. 
+// Run CMD as ADMINISTRATOR
+$ py install.py
+
+// Make the project IntelliJ and NetBeans compatible from CMD!
+$ convert.py /Users/johnexample/Desktop/myproject
+
+* If it says convert.py command not found, you may have to relaunch Command Prompt * 
 ```
 
 That's all it will take to convert your project. Enjoy!
