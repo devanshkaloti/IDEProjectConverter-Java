@@ -40,7 +40,7 @@ class InstallConvert():
             if not is_admin():
                 print("Please run install.py with admin privileges")
                 print("You can run it as 'runas /user:{ADMINUSER} py install.py'")
-                quit(print("Exiting, Code 0"))
+                sys.exit()
             else:
                 self.windows_install_route()
 
